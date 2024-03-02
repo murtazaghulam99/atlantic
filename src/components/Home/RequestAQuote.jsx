@@ -47,10 +47,10 @@ const RequestAQuote = () => {
                 For project inquiries only:
               </h1>
               <a
-                href="mailto:support@bookwritingexperts.com"
+                href="mailto:info@atlanticbookpublisher.com"
                 className="hover:text-[#28a745] transition-colors"
               >
-                support@bookwritingexperts.com
+               info@atlanticbookpublisher.com
               </a>
             </div>
           </div>

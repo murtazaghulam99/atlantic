@@ -26,7 +26,7 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <img src={email} className="invert" alt="" />
-                <p className="text-white">support@bookwritingexperts.com</p>
+                <p className="text-white">info@atlanticbookpublisher.com</p>
               </div>
               <div className="flex items-center space-x-2">
                 <img src={phone} className="invert" alt="" />
@@ -45,13 +45,14 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <img src={email} className="invert" alt="" />
                 <p className="text-white">
-                  445 S.Figueroa Street, Los Angeles, CA 90071
+                  200 Vesey Street, 24th Floor, New York, New York, 10281,
+                  United States of America
                 </p>
               </div>
               <div className="flex items-center space-x-2">
                 <img src={location} className="invert" alt="" />
                 <p className="text-white">
-                  502 W 7th Street STE 100, Erie PA 16502
+                  5250 Old Orchard Rd, Suite 300 Skokie, 60077
                 </p>
               </div>
             </div>
