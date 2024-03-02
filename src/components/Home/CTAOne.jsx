@@ -65,10 +65,10 @@ const CTAOne = () => {
                 Talk To An Expert
               </a>
               <a
-                href="tel:8555000057"
+                href="tel: +1-(315)-417-3330"
                 className="inline-block hover:bg-[#28a745] border-gray-700 hover:border-none text-gray-700 border-2 transition-colors hover:text-white py-3 px-5 rounded-full"
               >
-                (855) 500 0057
+                +1-(315)-417-3330
               </a>
             </div>
           </div>

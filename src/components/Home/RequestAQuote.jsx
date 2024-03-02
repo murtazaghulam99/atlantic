@@ -59,10 +59,10 @@ const RequestAQuote = () => {
             <div>
               <h1 className="font-bold text-2xl">For other inquiries only:</h1>
               <a
-                href="tel:8555000057"
+                href="tel: +1-(315)-417-3330"
                 className="hover:text-[#28a745] transition-colors"
               >
-                (855) 500 0057
+                +1-(315)-417-3330
               </a>
             </div>
           </div>

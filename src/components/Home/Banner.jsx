@@ -46,12 +46,12 @@ const Banner = () => {
                 LET'S DISCUSS
               </a>
               <a
-                href="tel:8555000057"
+                href="tel: +1-(315)-417-3330"
                 className={`inline-block bg-[#28a745] hover:bg-gray-700 text-white py-2 px-5 rounded-full ${
                   isMobile ? "block" : "inline-block"
                 }`}
               >
-                (855) 500 0057
+                +1-(315)-417-3330
               </a>
             </div>
             {/* Client Image */}

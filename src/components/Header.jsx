@@ -138,10 +138,10 @@ const Header = () => {
             {/* Buttons */}
             <div className="lg:flex items-center hidden">
               <a
-                href="tel:8555000057"
+                href="tel: +1-(315)-417-3330"
                 className="inline-block bg-[#28a745] hover:bg-gray-700 text-white py-2 px-4 rounded-full mr-4"
               >
-                (855) 500 0057{" "}
+                +1-(315)-417-3330{" "}
               </a>
               <button className="inline-block border-2 border-[#28a745] hover:bg-[#28a745] text-white py-2 px-4 rounded-full">
                 GET A QUOTE
