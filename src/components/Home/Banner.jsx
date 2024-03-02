@@ -17,14 +17,14 @@ const Banner = () => {
 
   return (
     <section
-      className="pt-52 px-4 text-white bg-cover h-screen bg-no-repeat bg-left md:bg-center relative"
+      className="md:pt-52 pt-36  px-4 text-white bg-cover h-screen bg-no-repeat bg-left md:bg-center relative"
       style={{ backgroundImage: `url(${homebanner})` }}
     >
       <div className="max-w-7xl mx-auto container">
         <div className="flex items-start">
           {/* Content */}
           <div className="flex-1 max-w-[500px] w-full">
-            <h1 className="text-5xl font-semibold leading-16">
+            <h1 className="md:text-5xl text-2xl font-semibold leading-16">
               Your ONE-STOP <br />
               <span className="text-[#28a745] font-bold">
                 Ghostwriting, Editing And Publishing Service
