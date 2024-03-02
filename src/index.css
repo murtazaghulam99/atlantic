@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.homebanner {
+  background-image: url(./assets/images/homebanner.webp);
+  background-repeat: no-repeat;
+  background: fixed;
+}
+
