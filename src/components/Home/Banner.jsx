@@ -6,18 +6,18 @@ const Banner = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Change 768 to your desired breakpoint
+      setIsMobile(window.innerWidth < 768);
     };
-    handleResize(); // Call the function to set initial state
-    window.addEventListener("resize", handleResize); // Add event listener for window resize
+    handleResize();
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize); // Remove event listener on component unmount
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
     <section
-      className="pt-40 px-4 text-white bg-cover h-screen bg-no-repeat bg-left md:bg-center relative"
+      className="pt-52 px-4 text-white bg-cover h-screen bg-no-repeat bg-left md:bg-center relative"
       style={{ backgroundImage: `url(${homebanner})` }}
     >
       <div className="max-w-7xl mx-auto container">
