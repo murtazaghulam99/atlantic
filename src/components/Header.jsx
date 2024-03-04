@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { logo } from "../assets/images";
+import { arrowdown, logo } from "../assets/images";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const [hovered, setHovered] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
+
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
@@ -15,7 +17,7 @@ const Header = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
-              <img className="h-8 min-w-10" src={logo} alt="Logo" />
+              <img className="w-full max-w-[200px]" src={logo} alt="Logo" />
             </div>
 
             {/* Mobile Menu Toggle Button */}
@@ -45,55 +47,72 @@ const Header = () => {
             </div>
 
             {/* Navigation Links */}
-            <div className="hidden md:block">
-              <ul className="flex justify-end space-x-4">
+            <div
+              className="hidden md:block w-full max-w-[700px]"
+              onMouseEnter={() => setToggle(true)}
+              onMouseLeave={() => setToggle(false)}
+            >
+              <ul className="flex justify-end items-center space-x-3">
                 <li className="text-white">
                   <a
                     href="#"
-                    className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                    className="hover:text-[#28a745] cursor-pointer transition-colors text-sm font-medium"
                   >
                     Home
                   </a>
                 </li>
-                <li className="text-white relative">
-                  <a
-                    href="#"
-                    className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
-                    onClick={() => setToggle(!toggle)}
-                  >
-                    Services
-                  </a>
+                <li
+                  className={`text-white relative ${
+                    hovered ? "hover:text-white" : ""
+                  }`}
+                >
+                  <div className="flex justify-center items-center px-4 gap-2">
+                    <a
+                      href="#"
+                      className="hover:text-[#28a745] cursor-pointer transition-colors text-sm font-medium"
+                      onMouseEnter={() => setHovered(true)}
+                      onMouseLeave={() => setHovered(false)}
+                    >
+                      Services
+                      {/* Add arrow icon */}
+                    </a>
+                    <img
+                      src={arrowdown}
+                      className="w-full max-w-[10px] invert"
+                      alt=""
+                    />
+                  </div>
                   {/* Dropdown */}
                   {toggle && (
-                    <ul className="bg-gray-800 absolute mt-4 shadow-lg rounded-md w-48">
-                      <li className="py-2 px-4">
+                    <ul className="bg-gray-800 absolute mt-1 shadow-lg rounded-md w-48">
+                      <li className="py-3 px-4">
                         <a
                           href="#"
-                          className="text-white block hover:bg-gray-700 rounded-md px-2 py-2"
+                          className="text-white block hover:text-[#28a745] cursor-pointer transition-colors "
                         >
                           Publishing
                         </a>
                       </li>
-                      <li className="py-2 px-4">
+                      <li className="py-3 px-4">
                         <a
                           href="#"
-                          className="text-white block hover:bg-gray-700 rounded-md px-2 py-2"
+                          className="text-white block hover:text-[#28a745] cursor-pointer transition-colors "
                         >
                           Book Illustration
                         </a>
                       </li>
-                      <li className="py-2 px-4">
+                      <li className="py-3 px-4">
                         <a
                           href="#"
-                          className="text-white block hover:bg-gray-700 rounded-md px-2 py-2"
+                          className="text-white block  hover:text-[#28a745] cursor-pointer transition-colors"
                         >
                           Ghostwriting
                         </a>
                       </li>
-                      <li className="py-2 px-4">
+                      <li className="py-3 px-4">
                         <a
                           href="#"
-                          className="text-white block hover:bg-gray-700 rounded-md px-2 py-2"
+                          className="text-white block   hover:text-[#28a745] cursor-pointer transition-colors"
                         >
                           Book Marketing
                         </a>
@@ -104,7 +123,7 @@ const Header = () => {
                 <li className="text-white">
                   <a
                     href="#"
-                    className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                    className="hover:text-[#28a745] cursor-pointer transition-colors  px-3 py-2 text-sm font-medium"
                   >
                     Pricing
                   </a>
@@ -112,7 +131,7 @@ const Header = () => {
                 <li className="text-white">
                   <a
                     href="#"
-                    className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                    className="hover:text-[#28a745] cursor-pointer transition-colors px-3 py-2 text-sm font-medium"
                   >
                     Our Portfolio
                   </a>
@@ -120,7 +139,7 @@ const Header = () => {
                 <li className="text-white">
                   <a
                     href="#"
-                    className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                    className="hover:text-[#28a745] cursor-pointer transition-colors px-3 py-2 text-sm font-medium"
                   >
                     Blogs
                   </a>
@@ -128,7 +147,7 @@ const Header = () => {
                 <li className="text-white">
                   <a
                     href="#"
-                    className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                    className="hover:text-[#28a745] cursor-pointer transition-colors px-3 py-2 text-sm font-medium"
                   >
                     Contact Us
                   </a>
@@ -138,12 +157,12 @@ const Header = () => {
             {/* Buttons */}
             <div className="lg:flex items-center hidden">
               <a
-                href="tel: +1-(315)-417-3330"
-                className="inline-block bg-[#28a745] hover:bg-gray-700 text-white py-2 px-4 rounded-full mr-4"
+                href="tel:+1-(315)-417-3330"
+                className="inline-block bg-[#28a745] transition-colors hover:bg-gray-700 text-white py-2 px-4 rounded-full mr-4"
               >
                 +1-(315)-417-3330{" "}
               </a>
-              <button className="inline-block border-2 border-[#28a745] hover:bg-[#28a745] text-white py-2 px-4 rounded-full">
+              <button className="inline-block border-2 border-[#28a745] transition-colors hover:bg-[#28a745] text-white py-2 px-4 rounded-full">
                 GET A QUOTE
               </button>
             </div>
@@ -155,7 +174,7 @@ const Header = () => {
                 <li className="py-2 px-4">
                   <a
                     href="#"
-                    className="text-white block hover:bg-gray-700 rounded-md px-2 py-2"
+                    className="text-white block hover:bg-gray-700 rounded-md hover:text-[#28a745] cursor-pointer transition-colors px-2 py-2"
                   >
                     Publishing
                   </a>
@@ -163,7 +182,7 @@ const Header = () => {
                 <li className="py-2 px-4">
                   <a
                     href="#"
-                    className="text-white block hover:bg-gray-700 rounded-md px-2 py-2"
+                    className="text-white block hover:bg-gray-700 hover:text-[#28a745] cursor-pointer transition-colors rounded-md px-2 py-2"
                   >
                     Book Illustration
                   </a>
@@ -171,7 +190,7 @@ const Header = () => {
                 <li className="py-2 px-4">
                   <a
                     href="#"
-                    className="text-white block hover:bg-gray-700 rounded-md px-2 py-2"
+                    className="text-white block hover:bg-gray-700 hover:text-[#28a745] cursor-pointer transition-colors rounded-md px-2 py-2"
                   >
                     Ghostwriting
                   </a>
@@ -179,7 +198,7 @@ const Header = () => {
                 <li className="py-2 px-4">
                   <a
                     href="#"
-                    className="text-white block hover:bg-gray-700 rounded-md px-2 py-2"
+                    className="text-white block hover:bg-gray-700 hover:text-[#28a745] cursor-pointer transition-colors rounded-md px-2 py-2"
                   >
                     Book Marketing
                   </a>

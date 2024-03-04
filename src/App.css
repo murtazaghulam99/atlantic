@@ -1,5 +1,3 @@
-.homebanner {
-  background-image: url(./assets/images/homebanner.webp);
-  background-repeat: no-repeat;
-  background: fixed;
+* {
+  scroll-behavior: smooth;
 }

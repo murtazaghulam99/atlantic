@@ -1,5 +1,5 @@
 import React from "react";
-import { booksOne, booksTwo } from "../../constants";
+import { booksOne } from "../../constants";
 
 const OurExperts = () => {
   return (
@@ -14,18 +14,8 @@ const OurExperts = () => {
           publishing books. From printing and publishing to distribution and
           marketing books on a global level, we take the writers through all.
         </p>
-        <div className="flex flex-wrap justify-center gap-8 mx-auto">
+        <div className="flex flex-wrap justify-center w-full max-w-[1024px] gap-8 mx-auto">
           {booksOne.map((book, index) => (
-            <img
-              key={index}
-              src={book}
-              className="w-full max-w-[280px] md:w-auto"
-              alt=""
-            />
-          ))}
-        </div>
-        <div className="flex flex-wrap justify-center gap-8 mx-auto mt-5">
-          {booksTwo.map((book, index) => (
             <img
               key={index}
               src={book}

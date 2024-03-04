@@ -45,9 +45,13 @@ import awardsix from "./awardsix.webp";
 import awardseven from "./awardseven.webp";
 import awardeight from "./awardeight.webp";
 import cards from "./cards.webp";
+import stars from "./stars.svg";
+import arrowdown from "./arrow-down.png";
 
 export {
+  arrowdown,
   cards,
+  stars,
   awardone,
   awardtwo,
   awardthree,

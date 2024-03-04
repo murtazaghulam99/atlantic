@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { clientone, star } from "../../assets/images";
+import { clientone, star, stars } from "../../assets/images";
 import { testimonialsData } from "../../constants";
 
 const Testimonials = () => {
@@ -59,7 +59,7 @@ const Testimonials = () => {
                   </p>
                   <div className="flex">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <img key={i} src={star} alt="" />
+                      <img key={i} src={star} className="star" alt="" />
                     ))}
                   </div>
                 </div>

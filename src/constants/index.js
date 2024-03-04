@@ -1,4 +1,10 @@
 import {
+  awardfive,
+  awardfour,
+  awardone,
+  awardsix,
+  awardthree,
+  awardtwo,
   bookfive,
   bookfour,
   bookone,
@@ -123,5 +129,16 @@ export const testimonialsData = [
   },
 ];
 
-export const booksOne = [bookone, booktwo, bookthree];
-export const booksTwo = [bookfour, bookfive, booksix];
+export const booksOne = [
+  bookone,
+  booktwo,
+  bookthree,
+  bookfour,
+  bookfive,
+  booksix,
+];
+// export const booksTwo = [bookfour, bookfive, booksix];
+
+export const awardsOne = [awardone, awardtwo, awardthree];
+
+export const awardsTwo = [awardfour, awardfive, awardsix];
